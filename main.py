@@ -134,6 +134,7 @@ class Game:
                 line += y[0]
             print(line)
         print(self.solution)
+        print(self.scoreGrid())
 
     def move_up(self):
         highest = self.positionTracker.highest_position
@@ -261,8 +262,7 @@ for i in range(100):
     game = Game()
     game.generateMap(total_moves)
     if game.scoreGrid() >= .025:
-        game.printGrid()
-        print(game.scoreGrid())
+        game.printGridVisual()
 
 # for x in game.states:
 #    game.printGridVisual(x[0])
